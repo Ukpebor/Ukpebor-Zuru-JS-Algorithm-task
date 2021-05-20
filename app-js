@@ -1,43 +1,44 @@
+//first task
 function convertFahrToCelsius(F){
     if(!Number.isInteger(parseInt(F)) || Array.isArray(F)){
-      return `${JSON.stringify(F)} is not a valid number but a/an ${Array.isArray(F)?"array":typeof(F)}`.replace("{\\",'');
+      return `${JSON.stringify(F)} is not a valid number but a/an ${Array.isArray(F)?"array":typeof(F)}`.replace("{\\",'')
     }
-    let C = (F-32) * 5/9;
-    return C.toFixed(4);
-};
+    let C = (F-32) * 5/9
+    return C.toFixed(4)
+}
   
 //console.log(convertFahrToCelsius({temp:0}))
   
+//second task
 function checkYuGiOh(n){
     if(isNaN(n)){
-     return "fizzbuzz is meh";
+     return "fizzbuzz is meh"
     }
-    let arr = [];
+    let arr = []
     for(let i=1; i<=n; i++){
-      let val = [];
+      let val = []
 
       if(i%2==0){
-        val.push("yu");
+        val.push("yu")
       }
       if(i%3==0){
-        val.push("gi");
+        val.push("gi")
       }
       if(i%5==0){
-        val.push("oh");
+        val.push("oh")
       }
       if(i%2!==0 && i%3!==0 && i%5!==0){
-        val.push(i);
+        val.push(i)
       }
      if(typeof(val[0])=="number"){
-      arr.push(val[0]);
+      arr.push(val[0])
      }
      else{
-       arr.push(val.join("-"));
-     };
-
+       arr.push(val.join("-"))
+     }
+     
     }
-    return arr;
+    return arr
 }
-console.log(checkYuGiOh(10));
-  
+console.log(checkYuGiOh(10))
   
